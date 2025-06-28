@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
@@ -16,7 +17,7 @@ body {
   margin-bottom: 0px;
 }
 footer {
-  background-color: black;
+  background-color: #1b3c1d;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -29,4 +30,9 @@ footer {
     max-height: 30%;
     height: 50vh;
     width: 75vh;
+}
+
+.accordion-item{
+    background-color: #468721 !important;
+    color: aliceblue !important;
 }
