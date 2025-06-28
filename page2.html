@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-success-subtle text-success-emphasis" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page01.html" target="_blank">Amenazas comunes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page2.html" target="_blank">Consejos de seguridad</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid my-3">
+        <div class="row">
+            <p>Buenas practicas</p>
+
+        </div>
+    </div>
+    <div class="container-fluid my-3">
+        <div class="row justify-content-center">
+            <div class="col-6 ">
+            <form id="contactForm">
+             <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" required>
+                 </div>
+                <div class="mb-3">
+                <label for="email" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="email" required>
+                 </div>
+                <div class="mb-3">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="message" required></textarea>
+                </div>
+                 <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid my-3">
+        <div class="row justify-content-center">
+            <!-- Botón para abrir modal -->
+            <div class="col-6 mt-4">
+                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#quizModal">
+                    ¡Haz tu test de seguridad!
+                </button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="quizModalLabel">Test de Seguridad</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>¿Qué debes hacer si recibes un correo sospechoso?</p>
+                            <div>
+                                <button class="btn btn-outline-primary mb-2" onclick="checkAnswer(false)">Abrirlo y
+                                    leer</button><br>
+                                <button class="btn btn-outline-primary mb-2" onclick="checkAnswer(true)">No abrirlo y
+                                    reportar</button>
+                            </div>
+                            <div id="feedback" class="mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <h6 class="text-center">
+                    Luis Diaz - Todos los derechos reservados - 2025
+                </h6>
+                <h6 class="text-center">
+                    Correo: luis.e.diaz.h@gmail.com
+                </h6>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

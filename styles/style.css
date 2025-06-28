@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+
+}
+
+#miContenido, #miContenido1, #miContenido2, #miContenido3, #miContenido4{
+    display: none;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin: 0;
+  margin-bottom: 0px;
+}
+footer {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3.5rem;
+  color: white;
+}
