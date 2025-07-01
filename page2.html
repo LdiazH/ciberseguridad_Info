@@ -34,7 +34,6 @@
         </div>
     </nav>
 
-
     <div class="container-fluid my-3">
         <div class="row">
             <div class="row justify-content-center ">
@@ -138,11 +137,12 @@ Aprenda a reconocer los correos electrónicos de suplantación de identidad, val
 
         </div>
     </div>
+    <!-- Formulario -->
     <div class="container-fluid my-5">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center p-3 mb-2 bg-secondary text-white ">
             <h4 class="text-center">Formulario de contacto</h4>
             <div class="col-6 ">
-            <form id="contactForm">
+            <form id="contactForm ">
              <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="name" required>
@@ -155,40 +155,44 @@ Aprenda a reconocer los correos electrónicos de suplantación de identidad, val
                 <label for="message" class="form-label">Mensaje</label>
                 <textarea class="form-control" id="message" required></textarea>
                 </div>
-                 <button type="submit" class="btn btn-primary">Enviar</button>
+                 <button type="submit" class="btn btn-success">Enviar</button>
             </form>
             </div>
         </div>
     </div>
     <div class="container-fluid my-3 ">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center pb-5">
             <!-- Botón para abrir modal -->
             <div class="col-6 my-4 p-5 text-center">
-                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#quizModal">
-                    ¡Haz tu test de seguridad!
-                </button>
+    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#quizModal">
+        ¡Haz tu test de seguridad!
+    </button>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="quizModalLabel">Test de Seguridad</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <!-- Modal -->
-            <div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="quizModalLabel">Test de Seguridad</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>¿Qué debes hacer si recibes un correo sospechoso?</p>
-                            <div>
-                                <button class="btn btn-outline-primary mb-2" onclick="checkAnswer(false)">Abrirlo y
-                                    leer</button><br>
-                                <button class="btn btn-outline-primary mb-2" onclick="checkAnswer(true)">No abrirlo y
-                                    reportar</button>
-                            </div>
-                            <div id="feedback" class="mt-3"></div>
-                        </div>
-                    </div>
+            <div class="modal-body">
+                <div id="question-container">
+                    <!-- Las preguntas se cargarán aquí dinámicamente -->
                 </div>
+                <div id="feedback" class="mt-3"></div>
+                <div class="d-flex justify-content-between mt-4">
+                    <button id="prev-btn" class="btn btn-secondary" disabled>Anterior</button>
+                    <button id="next-btn" class="btn btn-success">Siguiente</button>
+                </div>
+                <div class="progress mt-3">
+                    <div id="quiz-progress" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                </div>
+                <div id="results" class="mt-3 text-center"></div>
             </div>
+        </div>
+    </div>
+</div>
         </div>
     </div>
     <footer class="container-fluid">
